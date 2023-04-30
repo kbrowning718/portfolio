@@ -3,32 +3,20 @@ import { Hero } from "../../components";
 import { ScrollableSection } from "../../components";
 import { Navigation } from "../../components";
 import homeImage from "../../images/homepage.jpg";
-import { Button } from "../../components";
-import { CalendarContainer } from "../../components";
 
 export const Home = () => {
   return (
     <div className="home-container">
       <Navigation></Navigation>
       <ScrollableSection id="home">
-        <Hero
-          img={homeImage}
-          headline="Bottle Rocket Comedy"
-          text="Comedy Collective producing AMAZING shows in Baltimore & DC"
-        >
-          <Button
-            buttonLink="https://www.eventbrite.com/o/bob-smith-60714778103"
-            className="hero-cta"
-            buttonText="Search For Tickets"
-          ></Button>
-        </Hero>
+        <Hero headline="Portfolio" text="Portfolio Subheader"></Hero>
       </ScrollableSection>
 
-      <ScrollableSection id="upcoming-events">
-        <CalendarContainer></CalendarContainer>
+      <ScrollableSection id="work">
+        <Hero headline="Portfolio" text="Portfolio Subheader"></Hero>
       </ScrollableSection>
 
-      <ScrollableSection id="contact">
+      <ScrollableSection id="code">
         <Hero></Hero>
       </ScrollableSection>
     </div>

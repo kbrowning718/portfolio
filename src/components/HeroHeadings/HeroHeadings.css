@@ -1,0 +1,19 @@
+.headline-wrapper {
+    z-index: 500;
+    position: absolute;
+    margin-left: 10%;
+    max-width: 50%;
+
+}
+  
+  .hero-header {
+    font-size: 3.5rem;
+    color: #FCFCFD;
+  }
+  
+  .hero-subhead {
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:#C6C6C8;
+  }

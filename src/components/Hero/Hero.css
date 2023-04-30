@@ -4,7 +4,8 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  color: #eee;
+  color: #666;
+  align-items: center;
 }
 
 .bg-img {
@@ -14,45 +15,6 @@
   background-size: cover;
 }
 
-/* BG: #191A1F; secondary: #212027; accent: #12131A */
-
-/* Text: #76767D; */
-
-.headline-wrapper {
-  position: absolute;
-  z-index: 500;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 75%;
-  gap: 1.5rem;
-  text-align: center;
-}
-
-.hero-header,
-.hero-subhead {
-  margin: 0;
-}
-
-.hero-header {
-  font-size: 3.5rem;
-}
-
-.hero-subhead {
-  letter-spacing: 0.3rem;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
 
 .hero-img-wrapper {
   border: 1px solid green;

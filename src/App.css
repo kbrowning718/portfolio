@@ -1,0 +1,25 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Oxygen", sans-serif;
+  color-scheme: dark;
+  overflow: hidden;
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+p {
+  color: #FCFCFD;
+}
+
+
+
+
+
+
