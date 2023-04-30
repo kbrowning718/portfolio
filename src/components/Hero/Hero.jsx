@@ -3,14 +3,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { HeroHeadings } from "../../components";
 
-export const Hero = ({ img }) => {
+export const Hero = ({ id, headerText, subheaderText, children }) => {
   return (
     <div className="hero-container">
-      <div className="bg-img"> </div>
-      <HeroHeadings
-        headerText="Portfolio Header"
-        subheaderText="Subheader Text"
-      />
+      <div className="hero-img-container" id={id}>
+        <HeroHeadings headerText={headerText} subheaderText={subheaderText} />
+        {children}
+      </div>
     </div>
   );
 };

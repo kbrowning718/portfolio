@@ -6,7 +6,7 @@ header {
 .floating-nav-container {
   position: absolute;
   z-index: 2;
-  height: 15%;
+  height: 75px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
