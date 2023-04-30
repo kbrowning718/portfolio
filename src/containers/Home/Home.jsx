@@ -2,7 +2,6 @@ import "./Home.css";
 import { Hero } from "../../components";
 import { ScrollableSection } from "../../components";
 import { Navigation } from "../../components";
-import homeImage from "../../images/homepage.jpg";
 
 export const Home = () => {
   return (
