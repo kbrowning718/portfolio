@@ -4,13 +4,17 @@
 }
   
   .hero-header {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     color: #FCFCFD;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    
   }
   
   .hero-subhead {
     letter-spacing: 0.3rem;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.3rem;
     color:#C6C6C8;
   }
