@@ -11,18 +11,12 @@
   display:none;
 }
 
-.headshot {
-max-width: 100%;
-max-height: 100%;
-height: 75%;
-
-
-}
 
 
 .header-img-container {
-height: 80%;
-width: 60vh;
+  height: 50vh;
+  width: 50vh;
+  min-width: 50vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -31,6 +25,12 @@ width: 60vh;
   border-radius: 50%;
   box-shadow: 4px 3px 10px 0px rgba(0,0,0,0.32);
 }
+
+.headshot {
+  max-height: 100%;
+  max-width: 100%;
+  height: 75%;
+  }
 
 #home {
   background: #2D2E31;
@@ -46,8 +46,26 @@ width: 60vh;
 }
 
 
-#hero1 {
-  justify-content: space-around;
+
+@media screen and (max-width: 830px) {
+  .hero-img-container {
+  flex-direction: column;
+    width: unset;
+  }
+
+  .header-img-container {
+    max-height:45vh;
+    max-width: 45vh;
+    min-width: unset;
+  }
+
+  #hero1 {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+
+
 }
 
 
