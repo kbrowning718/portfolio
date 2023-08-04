@@ -12,7 +12,6 @@
 }
 
 
-
 .header-img-container {
   height: 50vh;
   width: 50vh;
@@ -54,8 +53,8 @@
   }
 
   .header-img-container {
-    max-height:45vh;
-    max-width: 45vh;
+    max-height:40vh;
+    max-width: 40vh;
     min-width: unset;
   }
 

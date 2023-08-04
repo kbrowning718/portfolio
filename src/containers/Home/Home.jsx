@@ -3,8 +3,14 @@ import { Hero } from "../../components";
 import { ScrollableSection } from "../../components";
 import { Navigation } from "../../components";
 import headshot from "../../images/headshot-final.png";
+import { useState } from "react";
 
 export const Home = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  function toggle(isOpen) {
+    setOpen((isOpen) => !isOpen);
+  }
   return (
     <div className="home-container">
       <Navigation
