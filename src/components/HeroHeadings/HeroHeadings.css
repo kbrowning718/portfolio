@@ -18,11 +18,6 @@
 
   @media screen and (max-width: 830px) {
 
-  .text-wrapper {
-    width: 90%;
-    text-align: center;
-  }
-
   .hero-header {
     font-size: 4.3vw;
   }
@@ -35,19 +30,14 @@
 
 
 @media screen and (max-width: 600px) {
-.text-wrapper {
-
-}
  
   .hero-header {
     font-size: 4.3vw;
   }
 
   .hero-subhead {
-    font-size: 3.1vw;
     font-weight: lighter;
   
   }
-
 
 }

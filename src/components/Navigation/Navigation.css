@@ -92,12 +92,13 @@ color:#FECD6A;
   display: flex;
   z-index: 100;
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
 }
 
 .mobile-scroll-icon-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5%;
   align-items: center;
   width: 100%;
 }
@@ -116,6 +117,7 @@ transition: all 1s ease-in-out;
   background-color: rgba(152, 143, 251, .5);
   border-radius: 5px;
   padding: 10px;
+  flex: 2 1 auto;
 }
 .hide {
 opacity: 0;
@@ -180,8 +182,6 @@ opacity: 0;
 display:none;
 }
 
-
-
 .contact-nav-container {
   width: 100%;
   margin: 0px 5%;
@@ -190,9 +190,24 @@ display:none;
 .iconify.mobile-scroll-icon {
   display: inline-block;
 }
-
-
 }
+
+@media screen and (max-width: 430px) {
+.mobile-nav-wrapper {
+  width: 90%;
+}
+
+.mobile-nav-menu {
+  gap: 5px;
+}
+
+.nav-link {
+  font-size: .7rem;
+}
+  }
+
+
+
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {
 		-webkit-transform: translateY(0);
