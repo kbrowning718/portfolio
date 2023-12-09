@@ -5,6 +5,7 @@
   height: 100vh;
   color: #666;
   align-items: center;
+  justify-content: space-between;
 }
 
 .bg-img {
@@ -23,12 +24,14 @@
   align-items: center;
   padding: 0px 5%;
   width: 100%;
+  justify-content: space-between;
 }
+
 
 
 @media screen and (max-width: 830px) {
   .hero-img-container {
-    margin-top: 30%;
+    margin-top: 35%;
    }
 
    .text-wrapper {
@@ -36,12 +39,39 @@
    }
   }
 
-@media screen and (max-width: 600px) {
- .hero-img-container {
-   margin-top: 50%;
+@media screen and (max-width: 650px) {
+ #hero1 {
+   margin-top: 45%;
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  #hero1 {
+    margin-top: 50%;
+   }
+ 
+ }
+
+ @media screen and (max-width: 430px) {
+  #hero1 {
+    margin-top: 60%;
+   }
+
+   .hero-img-container {
+    margin-top: 50%;
+   }
+ 
+ }
+
+ @media screen and (max-width: 399px) {
+  #hero1 {
+    margin-top: 75%;
+   }
+  }
+
+
+
 
 
 
