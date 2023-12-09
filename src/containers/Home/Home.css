@@ -50,6 +50,18 @@
   .hero-img-container {
   flex-direction: column;
     width: unset;
+    margin-top: 50%;
+  }
+
+  .text-wrapper {
+    width: unset;
+    margin-top: 15%;
+    text-align: center;
+  
+  }
+
+  #hero1 > div.text-wrapper {
+    margin-top: 0;
   }
 
   .header-img-container {
@@ -59,12 +71,9 @@
   }
 
   #hero1 {
-    justify-content: center;
+    justify-content: right;
     flex-direction: column-reverse;
   }
-
-
-
 }
 
 

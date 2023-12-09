@@ -26,6 +26,30 @@
 }
 
 
+@media screen and (max-width: 850px) {
+  .hero-img-container {
+    margin-top: 30%;
+   }
+
+   .text-wrapper {
+    margin-top: 0;
+   }
+  }
+
+@media screen and (max-width: 600px) {
+ .hero-img-container {
+   margin-top: 50%;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 
 
