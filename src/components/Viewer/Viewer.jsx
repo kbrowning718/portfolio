@@ -1,15 +1,29 @@
 import { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "./Viewer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import { Icon } from "@iconify/react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
 ).toString();
 
-export const Viewer = ({ children, file }) => {
+export const Viewer = ({
+  children,
+  file,
+  height,
+  width,
+  arrowIconRight,
+  arrowIconLeft,
+}) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+
+  useEffect(() => {
+    //changePage(pageNumber);
+  });
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -25,44 +39,62 @@ export const Viewer = ({ children, file }) => {
   };
 
   const nextPage = () => {
-    changePage(-1);
+    changePage(1);
   };
-
-  useEffect(() => {
-    // changePage(pageNumber);
-  });
 
   return (
     <div className="viewer">
       <Document
         file={file}
         page={pageNumber}
-        options={{ workerSrc: "/pdf.worker.js" }}
-        onSourceError={(err) => console.log(err)}
-        onSourceSuccess={() => console.log("SUCCESS")}
         onLoadSuccess={onDocumentLoadSuccess}
-        onLoadError={() => console.log("ERR")}
+        style={{ width: "150px", height: "300px" }}
       >
-        <Page pageNumber={pageNumber} />
+        <Page pageNumber={pageNumber} height={height} width={width} />
       </Document>
-      <p>
-        Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
-      </p>
-      <button
-        type="button"
-        disabled={pageNumber === 1}
-        onClick={() => setPageNumber(pageNumber - 1)}
-      >
-        <i style={{ fontSize: 25 }} className="fa fa-fw fa-arrow-left"></i>
-      </button>
-      <button
-        type="button"
-        disabled={pageNumber >= numPages}
-        onClick={() => setPageNumber(pageNumber + 1)}
-      >
-        <i style={{ fontSize: 25 }} className="fa fa-fw fa-arrow-right"></i>
-      </button>
-      {children}
+
+      <div className="page-info-button-wrapper">
+        <div className="button-wrapper">
+          <button
+            className="previous-page"
+            type="button"
+            disabled={pageNumber === 1}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "50px",
+              height: "25px",
+              fontSize: "1.5rem",
+            }}
+            onClick={previousPage}
+          >
+            {/* <i className="fa fa-fw fa-arrow-left"></i> */}
+            <Icon className="iconify arrow-left" icon={arrowIconLeft} />
+          </button>
+          <button
+            className="next-page"
+            type="button"
+            disabled={pageNumber >= numPages}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "50px",
+              height: "25px",
+              fontSize: "1.5rem",
+            }}
+            onClick={nextPage}
+          >
+            {/* <i className="fa fa-fw fa-arrow-right"></i> */}
+            <Icon className="iconify arrow-right" icon={arrowIconRight} />
+          </button>
+        </div>
+        <p className="page-info">
+          Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
+        </p>
+        {children}
+      </div>
     </div>
   );
 };

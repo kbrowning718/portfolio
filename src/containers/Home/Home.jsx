@@ -1,11 +1,9 @@
 import "./Home.css";
-import { Hero } from "../../components";
-import { ScrollableSection } from "../../components";
-import { Viewer } from "../../components";
-import { Navigation } from "../../components";
+import { Hero, ScrollableSection, Viewer, Navigation } from "../../components";
 import headshot from "../../images/headshot-final.png";
 import { useState } from "react";
-import resume from "./sample.pdf";
+import resume from "./Kirby Browning Résumé_2022.pdf";
+import { Button } from "../../components";
 
 export const Home = () => {
   const [isOpen, setOpen] = useState(false);
@@ -34,8 +32,18 @@ export const Home = () => {
       </ScrollableSection>
 
       <ScrollableSection id="work">
-        <Hero headerText="My Work" subheaderText="">
-          <Viewer file={resume}></Viewer>
+        <Hero
+          id="hero2"
+          headerText="Skills & Experience"
+          subheaderText="Review some of my work experience here."
+        >
+          <Viewer
+            file={resume}
+            height={420}
+            arrowIconLeft="ic:round-arrow-left"
+            arrowIconRight="ic:round-arrow-right"
+          ></Viewer>
+          <Button buttonText="hello" buttonLink="google.com" />
         </Hero>
       </ScrollableSection>
 

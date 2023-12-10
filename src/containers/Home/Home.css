@@ -44,6 +44,30 @@
   background: #2D2E31;
 }
 
+#hero2 {
+  flex-direction: row-reverse;
+  gap: 10%;
+  justify-content: space-evenly;
+}
+
+.page-info {
+  font-size: .5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.page-info-button-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-wrapper {
+  display: flex; 
+  gap: 5%;
+}
+
 
 
 @media screen and (max-width: 830px) {
@@ -57,7 +81,6 @@
     width: unset;
     margin-top: 15%;
     text-align: center;
-  
   }
 
   #hero1 > div.text-wrapper {
