@@ -3,5 +3,13 @@ import { Viewer } from "../../components";
 import "./Resume.css";
 
 export const Resume = () => {
-  return <Viewer file={resume}></Viewer>;
+  return (
+    <div class="resume-wrapper">
+      <Viewer
+        file={resume}
+        arrowIconLeft="ic:round-arrow-left"
+        arrowIconRight="ic:round-arrow-right"
+      ></Viewer>
+    </div>
+  );
 };

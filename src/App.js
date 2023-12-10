@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 // import { Nav } from "../../components";
 // import { Footer } from "../../components";
 import { Home } from "./containers";
+import { Resume } from "./containers";
 import "./App.css";
 
 export const App = () => {
@@ -10,6 +11,7 @@ export const App = () => {
       {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
         {/* <Route path="/about" element={<About />} /> */}
         {/* <Route path="/contact" element={<Contact />} />
         <Route path="/training" element={<Training />} />

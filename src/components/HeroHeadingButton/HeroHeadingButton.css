@@ -1,0 +1,43 @@
+
+  
+  .hero-header {
+    font-size: 5vh;
+    color: #FCFCFD;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    
+  }
+  
+  .hero-subhead {
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    font-size: 2.5vh;
+    color:#C6C6C8;
+  }
+
+  @media screen and (max-width: 830px) {
+
+  .hero-header {
+    font-size: 4.3vw;
+  }
+
+  .hero-subhead {
+    font-size: 2.8vh;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+ 
+  .hero-header {
+    font-size: 4.3vw;
+  }
+
+  .hero-subhead {
+    font-weight: lighter;
+  
+  }
+
+}

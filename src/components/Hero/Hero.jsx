@@ -1,9 +1,14 @@
 import "./Hero.css";
-import { useState } from "react";
-import { useEffect } from "react";
-import { HeroHeadings } from "../../components";
+import { HeroHeadings, Button } from "../../components";
 
-export const Hero = ({ id, headerText, subheaderText, children }) => {
+export const Hero = ({
+  id,
+  headerText,
+  subheaderText,
+  children,
+  buttonText,
+  buttonLink,
+}) => {
   return (
     <div className="hero-container">
       <div className="hero-img-container" id={id}>
