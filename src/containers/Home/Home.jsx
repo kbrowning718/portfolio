@@ -1,9 +1,11 @@
 import "./Home.css";
 import { Hero } from "../../components";
 import { ScrollableSection } from "../../components";
+import { Viewer } from "../../components";
 import { Navigation } from "../../components";
 import headshot from "../../images/headshot-final.png";
 import { useState } from "react";
+import pdf from "./sample.pdf";
 
 export const Home = () => {
   const [isOpen, setOpen] = useState(false);
@@ -11,6 +13,7 @@ export const Home = () => {
   function toggle(isOpen) {
     setOpen((isOpen) => !isOpen);
   }
+
   return (
     <div className="home-container">
       <Navigation
@@ -32,6 +35,7 @@ export const Home = () => {
 
       <ScrollableSection id="work">
         <Hero headerText="My Work" subheaderText=""></Hero>
+        <Viewer file={pdf}></Viewer>
       </ScrollableSection>
 
       <ScrollableSection id="code">
