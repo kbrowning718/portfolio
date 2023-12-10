@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import "./Viewer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
 ).toString();
 
-export const Viewer = ({ children, pdf }) => {
+export const Viewer = ({ children, file }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -14,10 +15,6 @@ export const Viewer = ({ children, pdf }) => {
     setNumPages(numPages);
     setPageNumber(1);
   }
-
-  useEffect(() => {
-    changePage(pageNumber);
-  });
 
   function changePage(offset) {
     setPageNumber((prevPageNumber) => prevPageNumber + offset);
@@ -31,14 +28,14 @@ export const Viewer = ({ children, pdf }) => {
     changePage(1);
   }
 
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    setNumPages(numPages);
-  }
+  useEffect(() => {
+    changePage(pageNumber);
+  });
 
   return (
     <div className="viewer">
       <Document
-        file={pdf}
+        file={file}
         options={{ workerSrc: "/pdf.worker.js" }}
         onSourceError={(err) => console.log(err)}
         onSourceSuccess={() => console.log("SUCCESS")}
