@@ -43,7 +43,7 @@ export const Home = () => {
             arrowIconLeft="ic:round-arrow-left"
             arrowIconRight="ic:round-arrow-right"
           ></Viewer>
-          {/* <Button buttonText="hello" buttonLink="google.com" /> */}
+          <Button buttonText="hello" buttonLink="google.com" />
         </Hero>
       </ScrollableSection>
 
