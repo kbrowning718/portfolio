@@ -11,9 +11,9 @@ import {
 import headshot from "../../images/headshot-final.png";
 import { useState } from "react";
 import resume from "./Kirby Browning Résumé_2022.pdf";
-import project1 from "./code-screenshot.png";
-import project2 from "./rendia-ppt.png";
-import project3 from "./mobile-ui-test-overview.png";
+import project1 from "./code.png";
+import project2 from "./product-management.png";
+import project3 from "./mobile-web-ux.png";
 
 export const Home = () => {
   const [isOpen, setOpen] = useState(false);
