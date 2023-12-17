@@ -5,10 +5,15 @@ import {
   Viewer,
   Navigation,
   HeroWithButton,
+  Button,
+  WorkImgGrid,
 } from "../../components";
 import headshot from "../../images/headshot-final.png";
 import { useState } from "react";
 import resume from "./Kirby Browning Résumé_2022.pdf";
+import project1 from "./code-screenshot.png";
+import project2 from "./rendia-ppt.png";
+import project3 from "./mobile-ui-test-overview.png";
 
 export const Home = () => {
   const [isOpen, setOpen] = useState(false);
@@ -36,7 +41,7 @@ export const Home = () => {
         </Hero>
       </ScrollableSection>
 
-      <ScrollableSection id="work">
+      <ScrollableSection id="experience">
         <HeroWithButton
           id="hero2"
           headerText="Skills & Work Experience"
@@ -53,8 +58,19 @@ export const Home = () => {
         </HeroWithButton>
       </ScrollableSection>
 
-      <ScrollableSection id="code">
-        <Hero headerText="Code Projects" subheaderText=""></Hero>
+      <ScrollableSection id="work">
+        <Hero
+          id="hero3"
+          headerText="My Work"
+          subheaderText="A collection of completed and active projects"
+        >
+          <WorkImgGrid
+            gridImg1={project1}
+            gridImg2={project2}
+            gridImg3={project3}
+          ></WorkImgGrid>
+          {/* <Button buttonText="hello"></Button> */}
+        </Hero>
       </ScrollableSection>
     </div>
   );

@@ -6,3 +6,4 @@ export { HeroHeadings } from "./HeroHeadings/HeroHeadings";
 export { Viewer } from "./Viewer/Viewer";
 export { HeroWithButton } from "./HeroWithButton/HeroWithButton";
 export { HeroHeadingButton } from "./HeroHeadingButton/HeroHeadingButton";
+export { WorkImgGrid } from "./WorkImgGrid/WorkImgGrid";

@@ -1,0 +1,21 @@
+.grid-wrapper {
+width: 75%;
+   gap: 5%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.grid-img-container {
+    width: 50%;
+    border:1px solid purple;
+    display: flex;
+    align-items: center;
+    object-fit: contain;
+}
+
+.grid-img {
+height: 100%;
+width: 100%;
+  
+}
