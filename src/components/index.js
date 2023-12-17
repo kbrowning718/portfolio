@@ -7,3 +7,4 @@ export { Viewer } from "./Viewer/Viewer";
 export { HeroWithButton } from "./HeroWithButton/HeroWithButton";
 export { HeroHeadingButton } from "./HeroHeadingButton/HeroHeadingButton";
 export { WorkImgGrid } from "./WorkImgGrid/WorkImgGrid";
+export { ProjectImgLink } from "./ProjectImgLink/ProjectImgLink";

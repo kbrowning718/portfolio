@@ -5,8 +5,8 @@ import {
   Viewer,
   Navigation,
   HeroWithButton,
-  Button,
   WorkImgGrid,
+  ProjectImgLink,
 } from "../../components";
 import headshot from "../../images/headshot-final.png";
 import { useState } from "react";
@@ -64,12 +64,24 @@ export const Home = () => {
           headerText="My Work"
           subheaderText="A collection of completed and active projects"
         >
-          <WorkImgGrid
-            gridImg1={project1}
-            gridImg2={project2}
-            gridImg3={project3}
-          ></WorkImgGrid>
-          {/* <Button buttonText="hello"></Button> */}
+          <WorkImgGrid>
+            <ProjectImgLink
+              gridImg={project2}
+              projectLink="/home"
+              projectLinkText="Product Management"
+            />
+
+            <ProjectImgLink
+              gridImg={project3}
+              projectLink="/home"
+              projectLinkText="User Experience"
+            />
+            <ProjectImgLink
+              gridImg={project1}
+              projectLink="/home"
+              projectLinkText="Code Projects"
+            />
+          </WorkImgGrid>
         </Hero>
       </ScrollableSection>
     </div>
